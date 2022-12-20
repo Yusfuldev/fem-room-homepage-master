@@ -1,0 +1,268 @@
+$Dark-Gray: hsl(0, 0%, 63%);
+$Black: hsl(0, 0%, 0%);
+$White: hsl(0, 0%, 100%);
+$Very-Dark-Gray: hsl(0, 0%, 27%);
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body,
+html {
+  max-width: 370px;
+  margin: 0 auto;
+  overflow-x: hidden;
+  font-family: "League Spartan", sans-serif;
+}
+body {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: $Dark-Gray;
+  header {
+    position: relative;
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      gap: 12rem;
+      color: $White;
+      padding: 4rem 2rem;
+      position: absolute;
+
+      .burger {
+        height: 1.2rem;
+        cursor: pointer;
+      }
+
+      menu {
+        visibility: collapse;
+        position: absolute;
+        background-color: $White;
+        top: 0;
+        left: 0;
+        width: 375px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem;
+        height: 7vh;
+
+        .links {
+          display: flex;
+          gap: 2rem;
+
+          a {
+            text-decoration: none;
+            color: $Black;
+            font-size: 1.4rem;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+    .slides {
+      display: flex;
+      overflow-x: scroll;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+      .desktop {
+        display: none;
+      }
+      .slide1,
+      .slide2,
+      .slide3 {
+        flex: 1 0 100%;
+
+        .slide-image {
+          img {
+            width: 100%;
+            object-position: bottom;
+          }
+        }
+        .slide-text {
+          padding: 2rem;
+          color: $Dark-Gray;
+          h2 {
+            color: $Black;
+            font-size: 3.2rem;
+            line-height: 3.5rem;
+            font-weight: 500;
+          }
+          p {
+            margin: 1rem 0;
+            line-height: 2rem;
+            font-size: 1.4rem;
+            width: 30rem;
+          }
+          a {
+            margin: 2rem 0;
+            color: $Very-Dark-Gray;
+            display: flex;
+            align-items: center;
+            letter-spacing: 1rem;
+            text-decoration: none;
+            gap: 2rem;
+          }
+        }
+      }
+      .slide-ctrl {
+        position: absolute;
+        background-color: $Black;
+        display: flex;
+        align-items: center;
+
+        // gap: 4rem;
+        top: 30.1rem;
+        right: 0;
+
+        img {
+          width: 100%;
+          background: $Black;
+          cursor: pointer;
+          padding: 1.5rem 3rem;
+          &:hover {
+            background: $Very-Dark-Gray;
+          }
+        }
+      }
+    }
+  }
+  .about {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    padding: 2rem;
+    img {
+      width: 100%;
+    }
+    .about-text {
+      h3 {
+        color: $Very-Dark-Gray;
+        letter-spacing: 0.3rem;
+      }
+      p {
+        padding: 1rem 0;
+        line-height: 1.8rem;
+        padding-right: 3.5rem;
+      }
+    }
+  }
+}
+
+/**** Media query ****/
+@media (min-width: 376px) and (max-width: 1440px) {
+  * {
+    box-sizing: border-box;
+  }
+  html,
+  body {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .burger,
+  .close {
+    display: none;
+  }
+  body {
+    header {
+      position: relative;
+      display: flex;
+      nav {
+        gap: 3rem;
+        color: $White;
+        padding: 2rem 5rem;
+
+        menu {
+          visibility: visible;
+          background: none;
+          width: 375px;
+          position: static;
+
+          .links {
+            display: flex;
+            gap: 3rem;
+
+            a {
+              color: $White;
+
+              &:hover {
+                text-align: right;
+                text-decoration: underline;
+                text-underline-offset: 1rem;
+              }
+            }
+          }
+        }
+      }
+      .slides {
+        display: flex;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+
+        .mobile {
+          display: none;
+        }
+        .desktop {
+          display: block;
+        }
+        .slide1,
+        .slide2,
+        .slide3 {
+          flex: 1 0 100%;
+          display: flex;
+
+          .slide-image {
+            flex: 1 0 60%;
+            img {
+              width: 100%;
+            }
+          }
+          .slide-text {
+            align-self: center;
+            padding: 0 6%;
+            flex: 1 0 40%;
+
+            h2 {
+              font-weight: 600;
+            }
+            p {
+              width: unset;
+            }
+          }
+        }
+        .slide-ctrl {
+          top: 46.1rem;
+          right: 39.2rem;
+        }
+      }
+    }
+
+    .about {
+      flex-wrap: unset;
+      gap: 0;
+      padding: 0;
+
+      .about-text {
+        display: grid;
+        place-content: center;
+        place-items: left;
+        padding-left: 6rem;
+        h3 {
+          color: $Very-Dark-Gray;
+          letter-spacing: 0.3rem;
+        }
+        p {
+          width: 88%;
+          line-height: 1.8rem;
+          padding-right: unset;
+        }
+      }
+    }
+  }
+}

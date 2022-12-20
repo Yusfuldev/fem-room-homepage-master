@@ -1,0 +1,335 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body,
+html {
+  max-width: 370px;
+  margin: 0 auto;
+  overflow-x: hidden;
+  font-family: "League Spartan", sans-serif;
+}
+
+body {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #a1a1a1;
+}
+
+body header {
+  position: relative;
+}
+
+body header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  gap: 12rem;
+  color: white;
+  padding: 4rem 2rem;
+  position: absolute;
+}
+
+body header nav .burger {
+  height: 1.2rem;
+  cursor: pointer;
+}
+
+body header nav menu {
+  visibility: collapse;
+  position: absolute;
+  background-color: white;
+  top: 0;
+  left: 0;
+  width: 375px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2rem;
+  height: 7vh;
+}
+
+body header nav menu .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+}
+
+body header nav menu .links a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+body header .slides {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+body header .slides .desktop {
+  display: none;
+}
+
+body header .slides .slide1,
+body header .slides .slide2,
+body header .slides .slide3 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
+}
+
+body header .slides .slide1 .slide-image img,
+body header .slides .slide2 .slide-image img,
+body header .slides .slide3 .slide-image img {
+  width: 100%;
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+
+body header .slides .slide1 .slide-text,
+body header .slides .slide2 .slide-text,
+body header .slides .slide3 .slide-text {
+  padding: 2rem;
+  color: #a1a1a1;
+}
+
+body header .slides .slide1 .slide-text h2,
+body header .slides .slide2 .slide-text h2,
+body header .slides .slide3 .slide-text h2 {
+  color: black;
+  font-size: 3.2rem;
+  line-height: 3.5rem;
+  font-weight: 500;
+}
+
+body header .slides .slide1 .slide-text p,
+body header .slides .slide2 .slide-text p,
+body header .slides .slide3 .slide-text p {
+  margin: 1rem 0;
+  line-height: 2rem;
+  font-size: 1.4rem;
+  width: 30rem;
+}
+
+body header .slides .slide1 .slide-text a,
+body header .slides .slide2 .slide-text a,
+body header .slides .slide3 .slide-text a {
+  margin: 2rem 0;
+  color: #454545;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 1rem;
+  text-decoration: none;
+  gap: 2rem;
+}
+
+body header .slides .slide-ctrl {
+  position: absolute;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 30.1rem;
+  right: 0;
+}
+
+body header .slides .slide-ctrl img {
+  width: 100%;
+  background: black;
+  cursor: pointer;
+  padding: 1.5rem 3rem;
+}
+
+body header .slides .slide-ctrl img:hover {
+  background: #454545;
+}
+
+body .about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 3rem;
+  padding: 2rem;
+}
+
+body .about img {
+  width: 100%;
+}
+
+body .about .about-text h3 {
+  color: #454545;
+  letter-spacing: 0.3rem;
+}
+
+body .about .about-text p {
+  padding: 1rem 0;
+  line-height: 1.8rem;
+  padding-right: 3.5rem;
+}
+
+/**** Media query ****/
+@media (min-width: 376px) and (max-width: 1440px) {
+  * {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  html,
+  body {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .burger,
+  .close {
+    display: none;
+  }
+  body header {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body header nav {
+    gap: 3rem;
+    color: white;
+    padding: 2rem 5rem;
+  }
+  body header nav menu {
+    visibility: visible;
+    background: none;
+    width: 375px;
+    position: static;
+  }
+  body header nav menu .links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 3rem;
+  }
+  body header nav menu .links a {
+    color: white;
+  }
+  body header nav menu .links a:hover {
+    text-align: right;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+  }
+  body header .slides {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+  body header .slides .mobile {
+    display: none;
+  }
+  body header .slides .desktop {
+    display: block;
+  }
+  body header .slides .slide1,
+  body header .slides .slide2,
+  body header .slides .slide3 {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body header .slides .slide1 .slide-image,
+  body header .slides .slide2 .slide-image,
+  body header .slides .slide3 .slide-image {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 60%;
+            flex: 1 0 60%;
+  }
+  body header .slides .slide1 .slide-image img,
+  body header .slides .slide2 .slide-image img,
+  body header .slides .slide3 .slide-image img {
+    width: 100%;
+  }
+  body header .slides .slide1 .slide-text,
+  body header .slides .slide2 .slide-text,
+  body header .slides .slide3 .slide-text {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding: 0 6%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 40%;
+            flex: 1 0 40%;
+  }
+  body header .slides .slide1 .slide-text h2,
+  body header .slides .slide2 .slide-text h2,
+  body header .slides .slide3 .slide-text h2 {
+    font-weight: 600;
+  }
+  body header .slides .slide1 .slide-text p,
+  body header .slides .slide2 .slide-text p,
+  body header .slides .slide3 .slide-text p {
+    width: unset;
+  }
+  body header .slides .slide-ctrl {
+    top: 46.1rem;
+    right: 39.2rem;
+  }
+  body .about {
+    -ms-flex-wrap: unset;
+        flex-wrap: unset;
+    gap: 0;
+    padding: 0;
+  }
+  body .about .about-text {
+    display: -ms-grid;
+    display: grid;
+    place-content: center;
+    place-items: left;
+    padding-left: 6rem;
+  }
+  body .about .about-text h3 {
+    color: #454545;
+    letter-spacing: 0.3rem;
+  }
+  body .about .about-text p {
+    width: 88%;
+    line-height: 1.8rem;
+    padding-right: unset;
+  }
+}
+/*# sourceMappingURL=style.css.map */
