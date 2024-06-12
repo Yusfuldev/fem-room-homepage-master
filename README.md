@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github](https://github.com/Yusfuldev/fem-room-homepage-master.com)
-- Live Site URL: [Live site](https://fem-room-homepage-master.netlify.app/)
+
 
 ### Built with
 
